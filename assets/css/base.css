@@ -1,0 +1,83 @@
+/* Chuẩn bị nơi khai báo biến */
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --primary-cl:#FB5931;
+    --navbar-height:24px;
+    --header-height:120px;
+    --header-seach-height: calc( var(--header-height) - var(--navbar-height) );
+}
+*{
+    /* Kế thừa từ thẻ chứa nó */
+    box-sizing: inherit;
+}
+html{
+    /* Set font size 62.5% có nghĩa tương ứng 10px */
+    /* HACK */
+    font-size: 62.5%;
+    /* Đặt dòng cao mặc định cho chữ */
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    /* Tất cả element sẽ được kế thừa box sizing */
+    box-sizing: border-box;
+}
+.clear{
+    clear: both;
+}
+.bold400{
+    font-weight: 400 !important;
+}
+/* Chuẩn bị cho responsive */
+.grid{
+    /* Với màn hình lớn hơn 1200 thì kích thước màn hình chỉ là 1200, nhưng với những màn hình nhỏ hơn thì maxwidth thì max width có tác dụng giảm kích thước grid có kích thước nhỏ hơn 1200. */
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+/* Trong trường hợp k sử dụng grid */
+.grid__full-width{
+    width: 100%;
+}
+/* Những thẻ nằm trong class này sẽ nằm trong trục nằm ngang, tổng độ dài thằng con vượt quá sẽ tự động nhảy xuống hàng */
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+.grid__colum-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.666666666666666666666666666667%;    
+}
+.grid__colum-10{
+    padding-left: 4px;
+    padding-right: 4px;
+    width:83.333333333333333333333333333333%;
+}
+.grid__colum-2-4{
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 20%;
+}
+ul{
+    list-style-type:none;
+}
+.btn{
+    padding: 8px 24px;
+    border: none;
+    font-size: 1.4rem;
+    background-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn-primary{
+    background-color: var(--primary-cl);
+    color: #fff;
+}
+.btn.btn--size-s{
+    height: 30px;
+}
+.paddingtop-30{
+    padding-top: 30px;
+}
